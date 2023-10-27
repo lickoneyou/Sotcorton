@@ -3,11 +3,13 @@ html {
   margin: 0 auto;
   scroll-behavior: smooth;
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 header {
   display: flex;
   justify-content: space-between;
+  padding: 0 50px;
 }
 
 nav {
@@ -52,4 +54,143 @@ li:hover {
 
 .contacts img {
   margin-right: 10px;
+}
+
+/* feedback */
+
+#feedback {
+  background-image: url("./assets/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  color: white;
+}
+
+.feedback_carton {
+  position: absolute;
+  top: -37px;
+  right: 0;
+}
+
+.feedback_description {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: space-evenly;
+}
+
+.feedback_description h1 {
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.feedback_description p {
+  max-width: 500px;
+  font-size: 20px;
+}
+
+.feedback_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 450px;
+  height: 445px;
+  z-index: 1;
+}
+
+.feedback_wrapper h2 {
+  font-size: 40px;
+  line-height: 80px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.feedback_wrapper input {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  padding: 10px 20px;
+  height: 50px;
+  width: 450px;
+}
+
+.feedback_wrapper textarea {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 40px;
+  padding: 10px 20px;
+  resize: none;
+}
+
+::placeholder {
+  color: white;
+  font-size: 20px;
+}
+
+.button {
+  display: inline-flex;
+  height: 40px;
+  width: 150px;
+  border: 2px solid white;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.8em;
+  letter-spacing: 1.5px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#button-6 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#button-6 a {
+  position: relative;
+  transition: all 0.45s ease-Out;
+}
+
+#spin {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  left: 70px;
+  top: 20px;
+  transform: rotate(0deg);
+  background: none;
+  position: absolute;
+  transition: all 0.5s ease-Out;
+}
+
+#button-6:hover #spin {
+  width: 200%;
+  height: 500%;
+  opacity: 1;
+  left: -70px;
+  top: -70px;
+  background: white;
+  transform: rotate(80deg);
+}
+
+#button-6:hover a {
+  color: #2d3142;
+}
+
+#button-6 a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
 }
